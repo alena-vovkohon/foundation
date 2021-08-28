@@ -1,0 +1,55 @@
+.company {
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  justify-content: space-between;
+  @include mq($screen-lg) {
+    text-align: center;
+    padding: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    > .company-logo {
+      border: solid 1px rgba(200, 200, 200, 0.5);
+    }
+  }
+
+  &-logo {
+    @include flex-align('center');
+    @include mq($screen-lg) {
+      height: 94px;
+      min-width: 100px;
+      &.one,
+      &.two,
+      &.three {
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      &.one,
+      &.four {
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+      &.tow,
+      &.five {
+        grid-column-start: 2;
+        grid-column-end: 3;
+      }
+      &.three,
+      &.six {
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+      &.four,
+      &.five,
+      &.six {
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+    }
+    @include mq($screen-md) {
+      img {
+        width: 75%;
+      }
+    }
+  }
+}

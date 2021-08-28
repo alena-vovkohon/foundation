@@ -1,0 +1,106 @@
+.slider {
+  background-image: url(../img/balloon.png);
+  background-repeat: no-repeat;
+  background-size: 243px;
+  background-position: right 26px bottom;
+  @include mq($screen-xs) {
+    background-image: none;
+  }
+  @include mq($screen-xmd) {
+    background-size: 243px;
+    background-position: bottom center;
+  }
+  .box-slider {
+    max-width: 1000px;
+    margin: 0 auto;
+    button.slick-next.slick-arrow,
+    button.slick-prev.slick-arrow {
+      display: none !important;
+      @include mq(1070px) {
+        width: 800px;
+      }
+    }
+    .slick-list {
+      .blocks.second.slick-slide {
+        position: absolute;
+        left: 0;
+      }
+      .third.slick-slide {
+        position: absolute;
+        left: 0;
+      }
+      p.blue {
+        max-width: 1140px;
+        padding-bottom: 28px;
+        text-align: center;
+        @include title-size(24px, bold, 30px);
+        color: $bg-blue-d;
+
+        @include mq($screen-sm) {
+          text-align: left;
+        }
+      }
+      p.grey {
+        padding-bottom: 34px;
+        margin: 0 auto;
+        text-align: center;
+        @include title-size(24px, normal, 34px);
+        color: $bg-grey;
+        max-width: 750px;
+        @include mq($screen-sm) {
+          text-align: left;
+        }
+      }
+      p.little {
+        @include title-size(16px, normal, 24px);
+        text-align: center;
+        color: $bg-grey;
+        span.bold {
+          font-weight: bold;
+        }
+        @include mq($screen-sm) {
+          text-align: left;
+        }
+      }
+      .second p.grey {
+        color: #009b4d;
+      }
+      .third p.grey {
+        color: #3142c6;
+      }
+    }
+  }
+  ul.slick-dots {
+    padding-top: 40px;
+    padding-bottom: 66px;
+    margin: 0 auto;
+    width: 100px;
+    display: flex;
+    color: $bg-grey;
+    opacity: 0.7;
+    justify-content: space-between;
+    @include mq($screen-xs) {
+      padding-bottom: 40px;
+    }
+  }
+  li button {
+    text-align: center;
+    display: none;
+  }
+  li {
+    font-size: 1.5rem;
+  }
+  li.slick-active::marker {
+    color: #3142c5;
+    opacity: 1.2;
+  }
+
+  &-show {
+    display: none;
+    text-align: center;
+    padding-bottom: 50px;
+    @include mq($screen-xs) {
+      display: block;
+    }
+  }
+}

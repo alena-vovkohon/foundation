@@ -1,0 +1,66 @@
+.main {
+  &-baner {
+    background-color: $bg-pink;
+    background-image: url('../img/ouch.png');
+    background-size: 796px 448px;
+    background-repeat: no-repeat;
+    background-position: right 25px center;
+    @include mq($screen-xlg) {
+      background-image: none;
+    }
+  }
+  &-article {
+    background-color: $bg-white;
+    &.block {
+      &-text {
+        background-color: $bg-white-d;
+      }
+      &-company {
+        margin-top: 13px;
+        margin-bottom: 13px;
+      }
+      &-selector {
+        position: relative;
+        background-image: url(../img/Man.png), url(../img/Screen.png);
+        background-size: auto, auto;
+        background-repeat: no-repeat, no-repeat;
+        background-position: left top 258px, right center;
+        @include mq(1260px) {
+          background-image: url(../img/Bird.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: right 15% center;
+        }
+        @include mq($screen-xxlg) {
+          background-position: right 5% center;
+        }
+        @include mq($screen-lg) {
+          background-size: auto;
+        }
+        @include mq($screen-xmd) {
+          background-image: none;
+          margin-bottom: 40px;
+          border-bottom: solid 1px $bg-grey-l;
+          padding-bottom: 40px;
+        }
+      }
+      &-slider {
+        margin-top: 33px;
+        margin-bottom: 106px;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+        @include mq($screen-md) {
+          margin-bottom: 50px;
+        }
+      }
+      &-option {
+        margin-bottom: 110px;
+        @include mq($screen-md) {
+          margin-bottom: 50px;
+        }
+      }
+      &-connect {
+        background: $bg-white-d;
+      }
+    }
+  }
+}

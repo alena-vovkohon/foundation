@@ -1,0 +1,56 @@
+.baner {
+  display: flex;
+  flex-direction: column;
+  padding: 37px 0 126px 0;
+  @include mq($screen-xlg) {
+    padding: 35px 15px;
+  }
+  &-text {
+    max-width: 754px;
+
+    h1 {
+      @include title-size(80px, bold, 78px);
+      letter-spacing: -0.5px;
+      color: $bg-grey;
+      margin-bottom: 34px;
+      @include mq($screen-lg) {
+        @include title-size(50px, bold, 50px);
+        letter-spacing: -0.3125px;
+        margin-bottom: 24px;
+      }
+    }
+    p {
+      @include title-size(24px, normal, 34px);
+      color: $bg-grey;
+      margin-bottom: 58px;
+      max-width: 456px;
+      @include mq($screen-sm) {
+        margin-bottom: 0;
+        max-width: 100%;
+      }
+    }
+  }
+  &-button {
+    display: flex;
+    .button-blue {
+      margin-right: 10px;
+    }
+    @include mq($screen-sm) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .button-blue {
+        margin-right: 0;
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &-image {
+    display: none;
+    @include mq($screen-xlg) {
+      display: block;
+      width: 100%;
+    }
+  }
+}

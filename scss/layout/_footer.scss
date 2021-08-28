@@ -1,0 +1,39 @@
+.footer {
+  @include flex-align('space-between');
+  padding-top: 43px;
+  padding-bottom: 47px;
+
+  &-lists {
+    display: flex;
+  }
+  @include mq(850px) {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    flex-direction: column;
+  }
+  @include mq($screen-sm) {
+    border-bottom: none;
+  }
+
+  &-down {
+    padding-top: 13px;
+    padding-bottom: 15px;
+    height: 50px;
+    @include mq($screen-sm) {
+      padding: 0;
+    }
+  }
+}
+footer .line {
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  @include mq($screen-sm) {
+    display: none;
+    &-on {
+      width: 100%;
+      margin-bottom: 30px;
+      display: block;
+      border-top: 1px solid $bg-grey-l;
+    }
+  }
+}

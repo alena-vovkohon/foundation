@@ -1,0 +1,41 @@
+.option {
+  margin: 0 auto;
+  max-width: 750px;
+  &-title {
+    margin-bottom: 110px;
+    @include flex-align('center');
+    flex-direction: column;
+    @include mq($screen-md) {
+      margin-bottom: 39px;
+    }
+    h2 {
+      @include title-size(56px, bold, 56px);
+      text-align: center;
+      letter-spacing: -0.5px;
+      color: $bg-grey;
+      margin-bottom: 20px;
+      @include mq($screen-md) {
+        @include title-size(40px, bold, 40px);
+        letter-spacing: -0.357143px;
+        margin-bottom: 18px;
+      }
+    }
+    p {
+      @include title-size(24px, normal, 34px);
+      text-align: center;
+      color: $bg-grey;
+      margin-bottom: 28px;
+    }
+  }
+  &-button {
+    a.button-link {
+      width: 247px;
+      background-color: $bg-blue;
+      transition: background-color 0.2s ease-out;
+      &:hover {
+        color: $bg-white;
+        background-color: $bg-blue-l;
+      }
+    }
+  }
+}

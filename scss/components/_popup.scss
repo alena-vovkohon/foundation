@@ -1,0 +1,36 @@
+.popup {
+  padding: 31px 30px;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  transition: 0.4s ease-in-out;
+  min-width: 612px;
+  border-radius: 10px;
+  position: absolute;
+  top: 45px;
+  right: -70%;
+  background: $bg-white;
+  &-menu {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 28px;
+  }
+  &-link {
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    cursor: pointer;
+    @include title-size(22px, normal, 26px);
+    @include link($bg-grey);
+    span {
+      font-weight: bold;
+      &:hover {
+        color: $bg-green;
+      }
+    }
+  }
+}

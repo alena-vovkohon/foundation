@@ -1,0 +1,53 @@
+.found {
+  max-width: 360px;
+  @include mq(850px) {
+    padding-bottom: 40px;
+    @include flex-align('center');
+    flex-direction: column;
+  }
+  @include mq($screen-lg) {
+    padding: 0 15px;
+    padding-bottom: 40px;
+  }
+  .logo {
+    @include mq(850px) {
+      @include flex-align('center');
+      flex-direction: column;
+      img {
+        padding-bottom: 20px;
+      }
+    }
+    &-text {
+      @include mq(850px) {
+        padding-left: 0;
+        text-align: center;
+      }
+
+      &-thin {
+        @include mq(960px) {
+          display: block;
+        }
+      }
+    }
+  }
+  &-text {
+    margin-top: 26px;
+    margin-bottom: 25px;
+    @include mq($screen-sm) {
+      display: none;
+    }
+    p.small {
+      @include title-size(18px, normal, 26px);
+      color: rgba(43, 41, 45, 0.6);
+    }
+  }
+  &-logos {
+    display: flex;
+    @include mq($screen-sm) {
+      margin-top: 31px;
+    }
+    .appstore-img {
+      padding-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.button-link {
+  @include title-size(18px, bold, 13px);
+  color: $bg-white;
+  width: 160px;
+  height: 48px;
+  @include flex-align('center');
+  @include link($bg-white);
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 1e-5) 100%
+    ),
+    $bg-blue;
+  border-radius: 2px;
+  cursor: pointer;
+  &:hover {
+    background: $bg-white;
+    color: $bg-blue;
+  }
+  &.button-white {
+    @include link($bg-blue);
+    background: $bg-white;
+    &:hover {
+      background: $bg-blue;
+      color: $bg-white;
+    }
+  }
+  @include mq(500px) {
+    width: 290px;
+  }
+}

@@ -1,0 +1,16 @@
+.container {
+  width: calc(100% - 130px - 130px);
+  margin: 0 auto;
+  @include mq($screen-xxxl) {
+    width: calc(100% - 50px - 50px);
+  }
+  @include mq($screen-xlg) {
+    width: calc(100% - 30px - 30px);
+  }
+  @include mq($screen-lg) {
+    width: calc(100% - 15px - 15px);
+    &.without-margin {
+      width: 100%;
+    }
+  }
+}

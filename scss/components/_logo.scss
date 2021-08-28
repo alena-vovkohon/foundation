@@ -1,0 +1,23 @@
+.logo {
+  display: flex;
+  align-items: center;
+  @include link($bg-grey);
+  &-text {
+    padding-left: 15px;
+    @include title-size(20px, normal, 25px);
+    &-bold {
+      font-weight: 800;
+    }
+    &-thin {
+      @include mq($screen-xxlg) {
+        display: none;
+      }
+    }
+  }
+  @include mq($screen-xxlg) {
+    &-image {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}

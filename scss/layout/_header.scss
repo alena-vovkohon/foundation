@@ -1,0 +1,108 @@
+.header {
+  background-color: $bg-pink;
+  @include mq($screen-xlg) {
+    background-color: $bg-white;
+  }
+  &-navbar {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+      padding: 39px 0;
+      @include mq($screen-xlg) {
+        padding: 8px 0;
+      }
+    }
+    .navbar {
+      display: flex;
+      &-image {
+        display: none;
+      }
+      @include mq($screen-xlg) {
+        &-image {
+          display: block;
+          min-width: 58px;
+          @include flex-align('center');
+          border-left: solid 1px rgba(0, 0, 0, 0.15);
+        }
+      }
+      &-nav {
+        margin-right: 56px;
+        padding: 39px 0;
+        @include mq($screen-xlg) {
+          padding: 8px 0;
+        }
+        @include mq($screen-xlg) {
+          display: none;
+          &.is-open {
+            display: block;
+            padding: 20px 20px;
+            min-width: 100px;
+            position: absolute;
+            top: 64px;
+            right: 50px;
+            background: $bg-white;
+            margin-right: 0;
+          }
+        }
+      }
+      &-menu {
+        width: 292px;
+        margin-top: 7px;
+        @include flex-align('space-between');
+        list-style: none;
+        &.open {
+          width: auto;
+          margin-top: 0;
+          flex-direction: column;
+          align-items: start;
+        }
+        .navbar-item:last-child {
+          position: relative;
+          padding-right: 19px;
+          &:after {
+            content: '';
+            width: 5px;
+            height: 8px;
+            background-image: url('../img/Arrow.svg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            @include mq(670px) {
+              display: none;
+            }
+          }
+
+          &:hover .popup {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+            @include mq(670px) {
+              display: none;
+            }
+          }
+        }
+
+        a {
+          @include title-size(18px, normal, 25px);
+          &.activ {
+            font-weight: bold;
+          }
+        }
+      }
+      &-link {
+        @include link($bg-grey);
+      }
+    }
+  }
+  .button-link {
+    margin: 39px 0;
+    @include mq(900px) {
+      margin: 8px 0;
+    }
+    @include mq(900px) {
+      display: none;
+    }
+  }
+}

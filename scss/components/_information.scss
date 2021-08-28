@@ -1,0 +1,26 @@
+.info {
+  padding-top: 77px;
+  padding-bottom: 76px;
+  @include flex-align('space-between');
+  @include mq($screen-xlg) {
+    padding: 46px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &-text {
+    max-width: 555px;
+    &:first-child {
+      margin-bottom: 20px;
+      margin-right: 29px;
+      @include mq($screen-xlg) {
+        margin-right: 0;
+      }
+    }
+    h4 {
+      @include title-size(22px, bold, 32px);
+    }
+    p {
+      @include title-size(22px, normal, 32px);
+    }
+  }
+}

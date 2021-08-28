@@ -1,0 +1,31 @@
+.networks {
+  @include flex-align('space-between');
+  @include mq($screen-sm) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 22px;
+  }
+  &-list {
+    width: 180px;
+    @include mq($screen-sm) {
+      margin-bottom: 31px;
+    }
+    ul {
+      flex-direction: row;
+      @include flex-align('space-between');
+      list-style: none;
+      a {
+        @include link(rgba(43, 41, 45, 0.6));
+        @include title-size(14px, normal, 22px);
+        cursor: pointer;
+      }
+    }
+  }
+  &-icons {
+    width: 97px;
+    @include flex-align('space-between');
+    a {
+      cursor: pointer;
+    }
+  }
+}
