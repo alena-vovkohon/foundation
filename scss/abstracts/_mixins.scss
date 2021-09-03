@@ -19,8 +19,6 @@
 
 // decoration text
 @mixin title-size($size, $weight, $height) {
-  font-family: $font-family;
-  font-style: normal;
   font-weight: $weight;
   font-size: $size;
   line-height: $height;

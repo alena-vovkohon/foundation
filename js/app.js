@@ -1,4 +1,5 @@
-$(document).ready(function () {
+$(document).ready(function (e) {
+  //slider
   $('.box-slider').slick({
     dots: true,
     infinite: true,
@@ -6,13 +7,12 @@ $(document).ready(function () {
     fade: true,
     cssEase: 'linear',
   })
-})
-
-$(document).ready(function () {
-  // console.log('hi')
+  //navbar
   $('.navbar-image').on('click', function () {
     $('.navbar-nav').toggleClass('is-open')
     $('.navbar-menu').toggleClass('open')
+    e.stopPropagation()
+    e.preventDefault()
     console.log('hi')
   })
 })
